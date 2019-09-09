@@ -34,7 +34,7 @@ public class ConcurrentTest {
         }
         long start = System.nanoTime();
         class RunService2 {
-            public void run() {
+            void run() {
                 synchronized (this) {
                     System.out.print(Thread.currentThread().getId() + ":");
                     for (int i = 0; i < 10; i++) {
